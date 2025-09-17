@@ -14,7 +14,7 @@ public class Main {
 
         double[][] points = new double[][]{};
         try {
-            File myObj = new File("points4.txt");
+            File myObj = new File("linearregression/src/main/resources/points.txt");
             Scanner scanner = new Scanner(myObj);
             int num = Integer.parseInt(scanner.nextLine());
             points = new double[num][2];
@@ -30,6 +30,7 @@ public class Main {
             }
         } catch (IOException e) {
             e.printStackTrace();
+            System.exit(1);
         }
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter the degree of the polynomial");
